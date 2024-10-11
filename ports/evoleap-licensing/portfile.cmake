@@ -6,15 +6,16 @@ vcpkg_download_distfile(
 )
 
 vcpkg_extract_source_archive(
+    ARCHIVE_OUT
     ARCHIVE ${ARCHIVE}
-    DESTINATION ${CURRENT_PACKAGES_DIR}
+    BASE_DIRECTORY evoleap-licensing_x64-windows
 )
 
-file(GLOB binfiles ${CURRENT_PACKAGES_DIR}/evoleap-licensing_x64-windows/bin/*)
-file(GLOB debugbinfiles ${CURRENT_PACKAGES_DIR}/evoleap-licensing_x64-windows/debug/bin/*)
-file(GLOB debuglibfiles ${CURRENT_PACKAGES_DIR}/evoleap-licensing_x64-windows/debug/lib/*)
-file(GLOB includefiles ${CURRENT_PACKAGES_DIR}/evoleap-licensing_x64-windows/include/*)
-file(GLOB libfiles ${CURRENT_PACKAGES_DIR}/evoleap-licensing_x64-windows/lib/*)
+file(GLOB binfiles ${ARCHIVE_OUT}/bin/*)
+file(GLOB debugbinfiles ${ARCHIVE_OUT}/debug/bin/*)
+file(GLOB debuglibfiles ${ARCHIVE_OUT}/debug/lib/*)
+file(GLOB includefiles ${ARCHIVE_OUT}/include/*)
+file(GLOB libfiles ${ARCHIVE_OUTR}/lib/*)
 
 file(INSTALL ${binfiles} DESTINATION ${CURRENT_PACKAGES_DIR}/bin)
 file(INSTALL ${debugbinfiles} DESTINATION ${CURRENT_PACKAGES_DIR}/debug/bin)
