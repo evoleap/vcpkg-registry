@@ -11,7 +11,8 @@ vcpkg_extract_source_archive(
     BASE_DIRECTORY evoleap-licensing_x64-windows
 )
 
-file(GLOB rootfiles ${ARCHIVE_OUT}/*)
+message(STATUS "Extracted the archive to ${ARCHIVE_OUT} and will install to ${CURRENT_PACKAGES_DIR}")
+
 file(GLOB binfiles ${ARCHIVE_OUT}/bin/*)
 file(GLOB debugbinfiles ${ARCHIVE_OUT}/debug/bin/*)
 file(GLOB debuglibfiles ${ARCHIVE_OUT}/debug/lib/*)
@@ -20,7 +21,6 @@ file(GLOB libfiles ${ARCHIVE_OUT}/lib/*)
 file(GLOB sharefiles ${ARCHIVE_OUT}/share/evoleap-licensing/*)
 file(GLOB toolsfiles ${ARCHIVE_OUT}/tools/evoleap-licensing/*)
 
-file(INSTALL ${rootfiles} DESTINATION ${CURRENT_PACKAGES_DIR})
 file(INSTALL ${binfiles} DESTINATION ${CURRENT_PACKAGES_DIR}/bin)
 file(INSTALL ${debugbinfiles} DESTINATION ${CURRENT_PACKAGES_DIR}/debug/bin)
 file(INSTALL ${debuglibfiles} DESTINATION ${CURRENT_PACKAGES_DIR}/debug/lib)
