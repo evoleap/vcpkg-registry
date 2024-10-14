@@ -1,8 +1,8 @@
 vcpkg_download_distfile(
     ARCHIVE
-    URLS "https://github.com/evoleap/vcpkg-registry/raw/refs/heads/main/evoleap-licensing_x64-windows-0.5.0.zip"
+    URLS "https://evoleapbuilds.blob.core.windows.net/elm-cpp-vcpkg/evoleap.licensing-2024-10-14-12-18-48.zip"
     FILENAME "evoleap-licensing_x64-windows.zip"
-    SHA512 "fc989364e0829a6ff24f7290cd7f7fab78b8e1923ed78e6a3b1b1abed446a226807e9605a16f9ee8fe98876203fd2c9fbc96bcd0e8dc7af548942d682a02bade"
+    SHA512 "7253d6ad345ad5709f10aeba0199599ed9c766181f73118373033f0f4a1ca97cf88eb6a2b83bb9f5c577cd5d5dc08403751ddd8d34c5f47b264be05527ddc08a"
 )
 
 vcpkg_extract_source_archive(
@@ -11,17 +11,23 @@ vcpkg_extract_source_archive(
     BASE_DIRECTORY evoleap-licensing_x64-windows
 )
 
+file(GLOB rootfiles ${ARCHIVE_OUT}/*)
 file(GLOB binfiles ${ARCHIVE_OUT}/bin/*)
 file(GLOB debugbinfiles ${ARCHIVE_OUT}/debug/bin/*)
 file(GLOB debuglibfiles ${ARCHIVE_OUT}/debug/lib/*)
 file(GLOB includefiles ${ARCHIVE_OUT}/include/*)
-file(GLOB libfiles ${ARCHIVE_OUTR}/lib/*)
+file(GLOB libfiles ${ARCHIVE_OUT}/lib/*)
+file(GLOB sharefiles ${ARCHIVE_OUT}/share/evoleap-licensing/*)
+file(GLOB toolsfiles ${ARCHIVE_OUT}/tools/evoleap-licensing/*)
 
+file(INSTALL ${rootfiles} DESTINATION ${CURRENT_PACKAGES_DIR})
 file(INSTALL ${binfiles} DESTINATION ${CURRENT_PACKAGES_DIR}/bin)
 file(INSTALL ${debugbinfiles} DESTINATION ${CURRENT_PACKAGES_DIR}/debug/bin)
 file(INSTALL ${debuglibfiles} DESTINATION ${CURRENT_PACKAGES_DIR}/debug/lib)
 file(INSTALL ${includefiles} DESTINATION ${CURRENT_PACKAGES_DIR}/include)
 file(INSTALL ${libfiles} DESTINATION ${CURRENT_PACKAGES_DIR}/lib)
+file(INSTALL ${sharefiles}/share/evoleap-licensing)
+file(INSTALL ${toolsfiles}/tools/evoleap-licensing)
 
 # Original portfile.cmake to install locally and create package:
 # vcpkg_from_git(
