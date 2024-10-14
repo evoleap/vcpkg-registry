@@ -1,6 +1,6 @@
 {
   "name": "evoleap-licensing",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "C++ library for the evoleap licensing manager (elm)",
   "homepage": "https://elm.io/",
   "supports": "windows & x64",

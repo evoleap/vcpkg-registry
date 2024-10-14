@@ -26,8 +26,8 @@ file(INSTALL ${debugbinfiles} DESTINATION ${CURRENT_PACKAGES_DIR}/debug/bin)
 file(INSTALL ${debuglibfiles} DESTINATION ${CURRENT_PACKAGES_DIR}/debug/lib)
 file(INSTALL ${includefiles} DESTINATION ${CURRENT_PACKAGES_DIR}/include)
 file(INSTALL ${libfiles} DESTINATION ${CURRENT_PACKAGES_DIR}/lib)
-file(INSTALL ${sharefiles}/share/evoleap-licensing)
-file(INSTALL ${toolsfiles}/tools/evoleap-licensing)
+file(INSTALL ${sharefiles} DESTINATION ${CURRENT_PACKAGES_DIR}/share/evoleap-licensing)
+file(INSTALL ${toolsfiles} DESTINATION ${CURRENT_PACKAGES_DIR}/tools/evoleap-licensing)
 
 # Original portfile.cmake to install locally and create package:
 # vcpkg_from_git(
