@@ -1,7 +1,7 @@
 {
   "default": {
     "evoleap-licensing": {
-      "baseline": "0.5.6",
+      "baseline": "0.5.7",
       "port-version": 0
     }
   }
