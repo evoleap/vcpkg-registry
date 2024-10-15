@@ -13,13 +13,13 @@ vcpkg_extract_source_archive(
 
 message(STATUS "Extracted the archive to ${ARCHIVE_OUT} and will install to ${CURRENT_PACKAGES_DIR}")
 
-file(GLOB binfiles ${ARCHIVE_OUT}/evoleap-licensing_x64-windows/bin/*)
-file(GLOB debugbinfiles ${ARCHIVE_OUT}/evoleap-licensing_x64-windows/debug/bin/*)
-file(GLOB debuglibfiles ${ARCHIVE_OUT}/evoleap-licensing_x64-windows/debug/lib/*)
-file(GLOB includefiles ${ARCHIVE_OUT}/evoleap-licensing_x64-windows/include/*)
-file(GLOB libfiles ${ARCHIVE_OUT}/evoleap-licensing_x64-windows/lib/*)
-file(GLOB sharefiles ${ARCHIVE_OUT}/evoleap-licensing_x64-windows/share/evoleap-licensing/*)
-file(GLOB toolsfiles ${ARCHIVE_OUT}/evoleap-licensing_x64-windows/tools/evoleap-licensing/*)
+file(GLOB binfiles ${ARCHIVE_OUT}/bin/*)
+file(GLOB debugbinfiles ${ARCHIVE_OUT}/debug/bin/*)
+file(GLOB debuglibfiles ${ARCHIVE_OUT}/debug/lib/*)
+file(GLOB includefiles ${ARCHIVE_OUT}/include/*)
+file(GLOB libfiles ${ARCHIVE_OUT}/lib/*)
+file(GLOB sharefiles ${ARCHIVE_OUT}/share/evoleap-licensing/*)
+file(GLOB toolsfiles ${ARCHIVE_OUT}/tools/evoleap-licensing/*)
 
 file(INSTALL ${binfiles} DESTINATION ${CURRENT_PACKAGES_DIR}/bin)
 file(INSTALL ${debugbinfiles} DESTINATION ${CURRENT_PACKAGES_DIR}/debug/bin)
