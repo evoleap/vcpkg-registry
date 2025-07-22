@@ -1,8 +1,8 @@
 vcpkg_download_distfile(
     ARCHIVE
-    URLS "https://evoleapbuilds.blob.core.windows.net/elm-cpp-vcpkg/evoleap.licensing-2025-02-11-15-48-37.zip"
+    URLS "https://evoleapbuilds.blob.core.windows.net/elm-cpp-vcpkg/evoleap.licensing-2025-07-22-09-45-28.zip"
     FILENAME "evoleap-licensing_x64-windows.zip"
-    SHA512 "29729ebbd3e1a5e6724985a39385fe28bf46bf5f34818840572d2800a4362f66d8c9cf3ead8ae863592755c1bc838b430f664bf2d9a5405b6030d94c3e8ab5ff"
+    SHA512 "C84bbed2b71284c4cf76844f448840d671dbc225a5968b1005c3b5eba81eec7713ad856a1375eaf7088ca19c87952218dd915667ca76207c54d6a1856fc2d900"
 )
 
 vcpkg_extract_source_archive(
